@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#map {
+  height: 92vh;
+  flex-basis: 70%;
+}
+
+.saved-locations {
+  flex-basis: 30%;
+  padding: 1rem;
+  text-align: center;
+  height: 92vh;
+  background-color: salmon;
+}

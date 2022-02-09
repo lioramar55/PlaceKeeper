@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Settings</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/user-settings.css" />
   </head>
-  <body>
+  <body onload="onInit()">
     <div class="container">
       <nav>
         <ul class="nav-bar">
@@ -18,42 +19,45 @@
             <span class="page-link map-link"><a href="map.html">Map Dashboard</a></span>
           </li>
           <li class="nav-item">
-            <span class="page-link map-link"><a href="#.html">Settings</a></span>
+            <span class="page-link map-link"><a href="#">Settings</a></span>
           </li>
         </ul>
       </nav>
-      <form>
-        <label for="user-email"
-          >E-Mail
-          <input type="email" name="email" id="user-email" />
-        </label>
-        <label for="user-age"
-          >Age
-          <input type="range" name="age" id="user-age" />
-        </label>
-        <h4>Colors</h4>
-        <label for="bg-color"
-          >Set Background Color
-          <input type="color" name="bg-color" id="bg-color" />
-        </label>
-        <label for="text-color"
-          >Set Text Color
-          <input type="color" name="text-color" id="text-color" />
-        </label>
-        <label for="birth-date"
-          >Birth Date
-          <input type="date" name="birth-date" id="birth-date" />
-        </label>
-        <label for="birth-time"
-          >Birth Time
-          <input type="datetime-local" name="birth-time" id="birth-time" />
-        </label>
-        <button>Set</button>
-      </form>
+      <section class="form">
+        <form>
+          <label for="user-email"
+            >E-Mail
+            <input type="email" placeholder="Your email" name="email" id="user-email" required />
+          </label>
+          <label for="user-age"
+            >Age
+            <input type="range" min="12" max="120" name="age" id="user-age" />
+            <span class="ageVal"></span>
+          </label>
+          <h4>Colors</h4>
+          <label for="bg-color"
+            >Set Background Color
+            <input type="color" name="bg-color" id="bg-color" />
+          </label>
+          <label for="text-color"
+            >Set Text Color
+            <input type="color" name="text-color" id="text-color" />
+          </label>
+          <label for="birth-date"
+            >Birth Date
+            <input type="date" name="birth-date" id="birth-date" />
+          </label>
+          <label for="birth-time"
+            >Birth Time
+            <input type="time" name="birth-time" id="birth-time" />
+          </label>
+          <button>Set</button>
+        </form>
+      </section>
     </div>
     <script src="js/services/utils.services.js"></script>
     <script src="js/services/i18n-service.js"></script>
     <script src="js/services/storage.services.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/user-controller.js"></script>
   </body>
 </html>

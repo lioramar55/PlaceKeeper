@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/map.css" />
     <title>PlaceKeeper Dashboard</title>
   </head>
   <body>
@@ -14,21 +15,28 @@
           <span class="page-link map-link"><a href="index.html">Home</a></span>
         </li>
         <li class="nav-item">
-          <span class="page-link map-link"><a href="#.html">Map Dashboard</a></span>
+          <span class="page-link map-link"><a href="#">Map Dashboard</a></span>
         </li>
         <li class="nav-item">
           <span class="page-link map-link"><a href="user-settings.html">Settings</a></span>
         </li>
       </ul>
     </nav>
-    <div id="map"></div>
+    <div class="container">
+      <div id="map"></div>
+      <div class="saved-locations">
+        <h2>Your Saved Locations</h2>
+      </div>
+    </div>
     <script src="js/services/utils.services.js"></script>
     <script src="js/services/i18n-service.js"></script>
     <script src="js/services/storage.services.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/index-controller.js"></script>
     <script
       async
+      defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQZpmcKBeBErXtuej4ntQ7PKcNPRsBeiY&callback=initMap"
     ></script>
+    <script src="js/map-controller.js"></script>
   </body>
 </html>
