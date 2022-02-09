@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>PlaceKeeper By Lior Amar</title>
   </head>
-  <body>
+  <body onload="onInit()">
     <div class="container">
       <nav>
         <ul class="nav-bar">
@@ -26,10 +26,15 @@
         <h1>Welcome to PlaceKeeper!</h1>
         <h2>The web application that let's you save your favorite places...</h2>
       </header>
+
+      <section display="none">
+        <h3>Your birthday is just <span></span> hours away</h3>
+      </section>
     </div>
     <script src="js/services/utils.services.js"></script>
     <script src="js/services/i18n-service.js"></script>
     <script src="js/services/storage.services.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/services/user-services.js"></script>
+    <script src="js/index-controller.js"></script>
   </body>
 </html>

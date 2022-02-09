@@ -1,5 +1,9 @@
-'use strict';
+'use strict'
 
 function onInit() {
-  console.log('Loading...');
+  var userSettings = getUserSettings()
+  if (userSettings) {
+    document.querySelector('h3').style.display = 'block'
+    document.querySelector('h3 span').innerText = hoursToNextBirthday()
+  }
 }
