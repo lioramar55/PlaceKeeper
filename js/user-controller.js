@@ -2,7 +2,7 @@
 
 function onInit() {
   document.querySelector('form').addEventListener('submit', onFormSubmit)
-  document.querySelector('[type=range]').onclick = onRangeChange
+  document.querySelector('[type=range]').oninput = onRangeChange
   document.querySelector('[type=range]').value = 18
   renderUserSettings()
 }
