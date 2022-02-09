@@ -29,7 +29,7 @@ function hoursToNextBirthday() {
 function saveUserLocation(locationName, position) {
   var user = loadFromStorage(storageKey)
   if (!user) user = { settings: {}, savedLocations: [] }
-  user.savedLocations.push({ locationName, position })
+  user.savedLocations.push({ locationName, position, id: getId() })
   saveToStorage(storageKey, user)
 }
 
